@@ -11,10 +11,11 @@ public class Record {
 
     /**
      * class presents record of diary
+     *
      * @param dateTime date and time
-     * @param text text od record
+     * @param text     text od record
      */
-    public Record(LocalDateTime dateTime, String text){
+    public Record(LocalDateTime dateTime, String text) {
         this.dateTime = dateTime;
         this.text = text;
     }
@@ -22,33 +23,33 @@ public class Record {
     /**
      * @return date and time
      */
-    public LocalDateTime getDateTime(){
+    public LocalDateTime getDateTime() {
         return dateTime;
     }
 
     /**
      * @param dateTime the date time to set
      */
-    public void setDateTime(LocalDateTime dateTime){
-         this.dateTime = dateTime;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
     /**
      * @return the text
      */
-    public String getText(){
+    public String getText() {
         return text;
     }
 
     /**
      * @param text text to set
      */
-    public void setText(String text){
+    public void setText(String text) {
         this.text = text;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return dateTime + " " + text;
     }
 }
