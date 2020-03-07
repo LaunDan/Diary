@@ -8,9 +8,9 @@ public class Main {
         Scanner sc = new Scanner(System.in, "Windows-1250");
         Diary diary = new Diary();
         String choose = "";
-        while (!choose.equals("4")) {
+        while (!choose.equals("5")) {
             System.out.println();
-            System.out.println("Choose action:\n1 - Add record\n2 - Find record\n3 - Delete record\n4 - End");
+            System.out.println("Choose action:\n1 - Add record\n2 - Find record\n3 - Delete record\n4 - Print plan\n5 - End");
             choose = sc.nextLine();
             System.out.println();
             switch (choose) {
@@ -24,6 +24,8 @@ public class Main {
                     diary.deleteRecords();
                     break;
                 case "4":
+                    diary.printMainScreen();
+                case "5":
                     System.out.println("End the program with any key.");
                     break;
                 default:
