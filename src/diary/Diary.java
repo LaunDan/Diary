@@ -56,6 +56,16 @@ public class Diary {
     }
 
     /**
+     * add record to the database
+     */
+    public void addRecord() {
+        LocalDateTime dateTime = findOutDateTime();
+        System.out.println("Enter text of the record:");
+        String text = sc.nextLine();
+        database.addRecord(dateTime, text);
+    }
+
+    /**
      * print record for current day
      *
      * @param day the day which print records
