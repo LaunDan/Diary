@@ -2,9 +2,13 @@ package diary;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Diary {
+    public static  final DateTimeFormatter FORMAT_DATA = DateTimeFormatter.ofPattern("d'.'M'.'y H:mm");
+    public static  final DateTimeFormatter FORMAT_DATA_WITHOUT_TIME = DateTimeFormatter.ofPattern("d'.'M'.'y");
+
     private Database database;
     private Scanner sc = new Scanner(System.in, "Windows-1250");
 

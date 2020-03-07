@@ -50,6 +50,6 @@ public class Record {
 
     @Override
     public String toString() {
-        return dateTime + " " + text;
+        return Diary.FORMAT_DATA.format(dateTime) + " " + text;
     }
 }
