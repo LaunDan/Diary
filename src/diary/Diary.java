@@ -39,8 +39,6 @@ public class Diary {
         }
     }
 
-    publicc
-
     void printRecords(LocalDateTime day) {
         ArrayList<Record> records = database.findRecords(day, false);
         for (Record z : records) {
