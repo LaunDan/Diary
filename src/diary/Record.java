@@ -13,7 +13,7 @@ public class Record {
      * class presents record of diary
      *
      * @param dateTime date and time
-     * @param text     text od record
+     * @param text     text of record
      */
     public Record(LocalDateTime dateTime, String text) {
         this.dateTime = dateTime;
