@@ -6,6 +6,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class presents diary
+ */
 public class Diary {
     public static final DateTimeFormatter FORMAT_DATA = DateTimeFormatter.ofPattern("d'.'M'.'y H:mm");
     public static final DateTimeFormatter FORMAT_DATA_WITHOUT_TIME = DateTimeFormatter.ofPattern("d'.'M'.'y");
@@ -13,10 +16,18 @@ public class Diary {
     private Database database;
     private Scanner sc = new Scanner(System.in, "Windows-1250");
 
+    /**
+     * diary
+     */
     public Diary() {
         database = new Database();
     }
 
+    /**
+     * find in database by date and time
+     *
+     * @return
+     */
     private LocalDateTime findOutDateTime() {
         System.out.println("Enter date and time in format [dd.mm.yyyy hh:mm]:");
         while (true) {
@@ -28,6 +39,11 @@ public class Diary {
         }
     }
 
+    /**
+     * find in database by date and time
+     *
+     * @return
+     */
     private LocalDateTime findOutDate() {
         System.out.println("Enter date in format [dd.mm.yyyy]:");
         while (true) {
@@ -39,6 +55,11 @@ public class Diary {
         }
     }
 
+    /**
+     * print record for current day
+     *
+     * @param day the day which print records
+     */
     void printRecords(LocalDateTime day) {
         ArrayList<Record> records = database.findRecords(day, false);
         for (Record z : records) {
@@ -46,6 +67,9 @@ public class Diary {
         }
     }
 
+    /**
+     * find record in database and print this record
+     */
     public void findRecords() {
         LocalDateTime dateTime = findOutDate();
         ArrayList<Record> records = database.findRecords(dateTime, false);
@@ -59,12 +83,19 @@ public class Diary {
         }
     }
 
+    /**
+     * delete record from entered date and time
+     */
     public void deleteRecords() {
         System.out.println("Delete records in date and time");
         LocalDateTime dateTime = findOutDateTime();
         database.deleteRecords(dateTime);
     }
 
+    /**
+     * print main screen
+     * welcome users and print records of today and tomorrow
+     */
     public void printMainScreen() {
         System.out.println();
         System.out.println();
