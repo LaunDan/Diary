@@ -1,20 +1,4 @@
-.idea/
-<<<<<<< HEAD
-out/
-=======
->>>>>>> f7b0efb... Create project
-*.html
-script-dir/jquery-ui.structure.css
 script-dir/
-element-list
-member-search-index.js
-member-search-index.zip
-package-search-index.js
-package-search-index.zip
-script.js
-search.js
-stylesheet.css
-type-search-index.js
-type-search-index.zip
-resources/glass.png
-resources/x.png
+index-files/
+out/
+.idea/
