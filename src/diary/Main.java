@@ -26,7 +26,7 @@ public class Main {
                 case "4":
                     diary.printMainScreen();
                 case "5":
-                    System.out.println("End the program with any key.");
+                    System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Wrong choose, please repeat choose with any key.");
